@@ -1,0 +1,27 @@
+{% extends 'base/layouthtml'%}
+
+{% block content %}
+</p>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="col">
+                    {% if forms %}
+                    <form action="">
+                        {% for field in forms %}
+                        <div class="form-group">
+                            {{ field }}
+                        </div>
+                        {% endfor %}
+                    </form>
+                        <input type="submit" value="Add Book"class="btn
+                        btn-outline-primary">
+                    {% else %}
+                    <p class ="text-danger">No form available</p>
+                    {% endif %}
+                </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    {% endblock %}
